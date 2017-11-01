@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "2318691142",
+    "firebase_url": "https://myitemsstore2-8.firebaseio.com",
+    "project_id": "myitemsstore2-8",
+    "storage_bucket": "myitemsstore2-8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2318691142:android:05ae6ef2f56e9333",
+        "android_client_info": {
+          "package_name": "by.bstu.fit.mystore20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2318691142-2qqbncct86n89shskokbd6svdjpclt4v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "by.bstu.fit.mystore20",
+            "certificate_hash": "dc826ddec1355b0fe24a5a5d6d91a9a765bfb80e"
+          }
+        },
+        {
+          "client_id": "2318691142-7hb4ra6a6k1h6jltqtge3j79adfjgaru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_6lqgv8i9zYZQt-GBvY8CvnKi8I4NF_M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2318691142-7hb4ra6a6k1h6jltqtge3j79adfjgaru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2318691142:android:f12ff1a35225c9a1",
+        "android_client_info": {
+          "package_name": "com.codepath.mypizza"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2318691142-94phqrhk67i9vl37db047snm5skgrnf5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codepath.mypizza",
+            "certificate_hash": "8b437074ecdfe928d1aff7184f11f0830f9ee206"
+          }
+        },
+        {
+          "client_id": "2318691142-4huq2p4jt9e8ql6ol6lfp2gvoed9rps1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codepath.mypizza",
+            "certificate_hash": "dc826ddec1355b0fe24a5a5d6d91a9a765bfb80e"
+          }
+        },
+        {
+          "client_id": "2318691142-7hb4ra6a6k1h6jltqtge3j79adfjgaru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_6lqgv8i9zYZQt-GBvY8CvnKi8I4NF_M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2318691142-7hb4ra6a6k1h6jltqtge3j79adfjgaru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
