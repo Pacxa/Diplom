@@ -1,14 +1,17 @@
 package com.codepath.mypizza.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.codepath.mypizza.NameIntput;
 import com.codepath.mypizza.R;
 import com.codepath.mypizza.data.Pizza;
 import com.codepath.mypizza.util.ImageUtils;
@@ -25,6 +28,7 @@ public class PizzaDetailFragment extends Fragment {
   TextView itemNameTextView;
   TextView itemPriceTextView;
   ImageView itemPhotoImageView;
+  Button addNewItemButton;
 
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,6 +55,7 @@ public class PizzaDetailFragment extends Fragment {
     itemNameTextView = (TextView) view.findViewById(R.id.itemNameTextView);
     itemPriceTextView = (TextView) view.findViewById(R.id.itemPriceTextView);
     itemPhotoImageView = (ImageView) view.findViewById(R.id.itemPhotoImageView);
+    addNewItemButton = (Button) view.findViewById(R.id.addItemButton);
 
     // update view
 //    tvTitle.setText(Pizza.pizzaMenu[position]);
@@ -58,6 +63,12 @@ public class PizzaDetailFragment extends Fragment {
     itemNameTextView.setText("Name: "+getArguments().getString("itemName"));
     itemPriceTextView.setText("Price: "+getArguments().getString("itemPrice"));
     itemPhotoImageView.setImageBitmap(ImageUtils.decodeBase64(getArguments().getString("itemPhoto")));
+    addNewItemButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        startNameInputActivity();
+      }
+    });
 
   }
 
@@ -65,5 +76,10 @@ public class PizzaDetailFragment extends Fragment {
   public void updateView(int position){
     tvTitle.setText(Pizza.pizzaMenu[position]);
     tvDetails.setText(Pizza.pizzaDetails[position]);
+  }
+
+  public void startNameInputActivity(){
+    Intent i = new Intent(getContext(), NameIntput.class);
+    startActivity(i);
   }
 }

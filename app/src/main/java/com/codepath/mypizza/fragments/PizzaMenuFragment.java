@@ -1,6 +1,7 @@
 package com.codepath.mypizza.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
+import com.codepath.mypizza.NameIntput;
 import com.codepath.mypizza.R;
 import com.codepath.mypizza.data.Pizza;
 import com.codepath.mypizza.entity.Item;
@@ -37,6 +40,7 @@ public class PizzaMenuFragment extends Fragment {
     private FirebaseAuth mAuth;
     private DatabaseReference myRef;
     private FirebaseDatabase database;
+    private Button addItemButton;
     ArrayList<Item> item_list = new ArrayList<>();
 
 
@@ -63,6 +67,7 @@ public class PizzaMenuFragment extends Fragment {
 
         item_list = new ArrayList<>();
         items_names = new ArrayList<>();
+
 
         myRef.child(user.getUid()).
 
@@ -113,6 +118,14 @@ public class PizzaMenuFragment extends Fragment {
                 listener.onPizzaItemSelected(position); // (3) Communicate with Activity using Listener
             }
         });
+
+//        addItemButton = (Button) getView().findViewById(R.id.addItemButton);
+//        addItemButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startInputNameActivity();
+//            }
+//        });
     }
 
     private OnItemSelectedListener listener;
@@ -151,5 +164,10 @@ public class PizzaMenuFragment extends Fragment {
         itemsAdapter.notifyDataSetChanged();
 
     }
+
+//    public void startInputNameActivity(){
+//        Intent i = new Intent(getView().getContext(), NameIntput.class);
+//        startActivity(i);
+//    }
 
 }

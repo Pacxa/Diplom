@@ -16,9 +16,13 @@
         <activity android:name=".EmailPasswordAuthorization">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NameIntput" />
+        <activity android:name=".InputPrice" />
+        <activity android:name=".ImageInput"></activity>
     </application>
 
 </manifest>
