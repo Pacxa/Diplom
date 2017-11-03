@@ -1,7 +1,6 @@
 package com.codepath.mypizza.fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,12 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
-import com.codepath.mypizza.NameIntput;
 import com.codepath.mypizza.R;
-import com.codepath.mypizza.data.Pizza;
 import com.codepath.mypizza.entity.Item;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,13 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-/**
- * Created by Shyam Rokde on 8/5/16.
- */
-public class PizzaMenuFragment extends Fragment {
+public class ItemMenuFragment extends Fragment {
 
 
     ArrayAdapter<String> itemsAdapter;
@@ -40,7 +30,6 @@ public class PizzaMenuFragment extends Fragment {
     private FirebaseAuth mAuth;
     private DatabaseReference myRef;
     private FirebaseDatabase database;
-    private Button addItemButton;
     ArrayList<Item> item_list = new ArrayList<>();
 
 
@@ -114,18 +103,10 @@ public class PizzaMenuFragment extends Fragment {
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // go to activity to load pizza details fragment
-                listener.onPizzaItemSelected(position); // (3) Communicate with Activity using Listener
+
+                listener.onPizzaItemSelected(position);
             }
         });
-
-//        addItemButton = (Button) getView().findViewById(R.id.addItemButton);
-//        addItemButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startInputNameActivity();
-//            }
-//        });
     }
 
     private OnItemSelectedListener listener;
@@ -137,7 +118,7 @@ public class PizzaMenuFragment extends Fragment {
             this.listener = (OnItemSelectedListener) context; // = (YourActivity) context
         } else {
             throw new ClassCastException(context.toString()
-                    + " must implement PizzaMenuFragment.OnItemSelectedListener");
+                    + " must implement ItemMenuFragment.OnItemSelectedListener");
         }
     }
 
@@ -157,17 +138,8 @@ public class PizzaMenuFragment extends Fragment {
     }
 
     public void refreshAdapter() {
-
-//        for (Item item : item_list) {
-//            items_names.add(item.getName());
-//        }
         itemsAdapter.notifyDataSetChanged();
 
     }
-
-//    public void startInputNameActivity(){
-//        Intent i = new Intent(getView().getContext(), NameIntput.class);
-//        startActivity(i);
-//    }
 
 }

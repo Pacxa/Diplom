@@ -80,7 +80,6 @@ public class ImageInput extends AppCompatActivity {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                 ImageView imageView = (ImageView) findViewById(R.id.imageView);
                 imageView.setImageBitmap(bitmap);
-                //buildItem.setPathToPhoto(ImageUtils.getBytes(bitmap));
                 buildItem.setPathToPhoto(ImageUtils.encodeTobase64(bitmap));
             } catch (IOException e) {
                 e.printStackTrace();
@@ -99,7 +98,6 @@ public class ImageInput extends AppCompatActivity {
 
     public void onSaveButtonClick(View view){
 
-        //dbHelper.createItem(buildItem.getName(),buildItem.getPrice(),true,buildItem.getPathToPhoto());
         myRef.child(user.getUid()).child("Items").push().setValue(new Item(buildItem.getName(),buildItem.getPrice(),buildItem.getSelected(), buildItem.getPathToPhoto()));
 
         Cursor c = dbHelper.fetchAllItems();

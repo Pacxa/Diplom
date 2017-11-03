@@ -18,10 +18,7 @@ import com.codepath.mypizza.util.ImageUtils;
 
 import org.w3c.dom.Text;
 
-/**
- * Created by Shyam Rokde on 8/5/16.
- */
-public class PizzaDetailFragment extends Fragment {
+public class ItemDetailFragment extends Fragment {
   int position = 0;
   TextView tvTitle;
   TextView tvDetails;
