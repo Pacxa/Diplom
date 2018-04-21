@@ -46,7 +46,7 @@ public class InputPrice extends AppCompatActivity {
             return ;
         }
 
-        Intent previousActivity = new Intent(this, MainActivity.class);
+        Intent previousActivity = new Intent(this, NameIntput.class);
         previousActivity.putExtra(Shared.ITEM_OBJECT,buildItem);
         startActivity(previousActivity);
     }

@@ -10,6 +10,9 @@ import android.util.Log;
 
 import com.codepath.mypizza.entity.Item;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ItemsDbAdapter {
     public static final String KEY_ROWID = "_id";
     public static final String KEY_NAME = "name";
@@ -21,13 +24,16 @@ public class ItemsDbAdapter {
     private DatabaseHelper mDbHelper;
     private SQLiteDatabase mDb;
 
+    SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+    Date d = new Date();
+
     private static final String DATABASE_NAME = "World";
-    private static final String SQLITE_TABLE = "Item";
+    private String SQLITE_TABLE = sdf.format(d);
     private static final int DATABASE_VERSION = 1;
 
     private final Context mCtx;
 
-    private static final String DATABASE_CREATE =
+    private String DATABASE_CREATE =
             "CREATE TABLE if not exists " + SQLITE_TABLE + " (" +
                     KEY_ROWID + " integer PRIMARY KEY autoincrement," +
                     KEY_NAME + "," +
@@ -36,7 +42,7 @@ public class ItemsDbAdapter {
                     KEY_PATH_TO_PHOTO + " BLOB" +
                     ");";
 
-    private static class DatabaseHelper extends SQLiteOpenHelper {
+    private class DatabaseHelper extends SQLiteOpenHelper {
 
         DatabaseHelper(Context context) {
             super(context, DATABASE_NAME, null, DATABASE_VERSION);

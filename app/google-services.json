@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "2318691142",
-    "firebase_url": "https://myitemsstore2-8.firebaseio.com",
-    "project_id": "myitemsstore2-8",
-    "storage_bucket": "myitemsstore2-8.appspot.com"
+    "project_number": "602898395355",
+    "firebase_url": "https://diplom-65fb1.firebaseio.com",
+    "project_id": "diplom-65fb1",
+    "storage_bucket": "diplom-65fb1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:2318691142:android:05ae6ef2f56e9333",
+        "mobilesdk_app_id": "1:602898395355:android:f12ff1a35225c9a1",
         "android_client_info": {
-          "package_name": "by.bstu.fit.mystore20"
+          "package_name": "com.codepath.mypizza"
         }
       },
       "oauth_client": [
         {
-          "client_id": "2318691142-2qqbncct86n89shskokbd6svdjpclt4v.apps.googleusercontent.com",
+          "client_id": "602898395355-psu60fqo2rm04bmf4svooulsjr8ek3oo.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "by.bstu.fit.mystore20",
-            "certificate_hash": "dc826ddec1355b0fe24a5a5d6d91a9a765bfb80e"
+            "package_name": "com.codepath.mypizza",
+            "certificate_hash": "73c4058d7b941c3f5a3b1e12b44b2586abfee937"
           }
         },
         {
-          "client_id": "2318691142-7hb4ra6a6k1h6jltqtge3j79adfjgaru.apps.googleusercontent.com",
+          "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC_6lqgv8i9zYZQt-GBvY8CvnKi8I4NF_M"
+          "current_key": "AIzaSyCaj25vqc9rCFuExj4XW2Kk9ds4IlUI3wc"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "2318691142-7hb4ra6a6k1h6jltqtge3j79adfjgaru.apps.googleusercontent.com",
+              "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -52,36 +52,28 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:2318691142:android:f12ff1a35225c9a1",
+        "mobilesdk_app_id": "1:602898395355:android:693e635e2a5d8df3",
         "android_client_info": {
-          "package_name": "com.codepath.mypizza"
+          "package_name": "com.example.diplom"
         }
       },
       "oauth_client": [
         {
-          "client_id": "2318691142-94phqrhk67i9vl37db047snm5skgrnf5.apps.googleusercontent.com",
+          "client_id": "602898395355-gme9v0j9ohm766vv2v33ve8t68gakppa.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.codepath.mypizza",
-            "certificate_hash": "8b437074ecdfe928d1aff7184f11f0830f9ee206"
+            "package_name": "com.example.diplom",
+            "certificate_hash": "1817b7eb360f75e6de4f1c453eecf553b6504cf8"
           }
         },
         {
-          "client_id": "2318691142-4huq2p4jt9e8ql6ol6lfp2gvoed9rps1.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.codepath.mypizza",
-            "certificate_hash": "dc826ddec1355b0fe24a5a5d6d91a9a765bfb80e"
-          }
-        },
-        {
-          "client_id": "2318691142-7hb4ra6a6k1h6jltqtge3j79adfjgaru.apps.googleusercontent.com",
+          "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC_6lqgv8i9zYZQt-GBvY8CvnKi8I4NF_M"
+          "current_key": "AIzaSyCaj25vqc9rCFuExj4XW2Kk9ds4IlUI3wc"
         }
       ],
       "services": {
@@ -92,7 +84,147 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "2318691142-7hb4ra6a6k1h6jltqtge3j79adfjgaru.apps.googleusercontent.com",
+              "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602898395355:android:6617475fa8ceda82",
+        "android_client_info": {
+          "package_name": "com.example.diplom_"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602898395355-ruka1v7803pharpr0md2luu0ls8tu4s1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.diplom_",
+            "certificate_hash": "73c4058d7b941c3f5a3b1e12b44b2586abfee937"
+          }
+        },
+        {
+          "client_id": "602898395355-3fdk9ab5n6lfsfmaosr6a6shocqkrcf9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.diplom_",
+            "certificate_hash": "1817b7eb360f75e6de4f1c453eecf553b6504cf8"
+          }
+        },
+        {
+          "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaj25vqc9rCFuExj4XW2Kk9ds4IlUI3wc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602898395355:android:817196e0a3bc1161",
+        "android_client_info": {
+          "package_name": "com.example.frost.online_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602898395355-k1u3tj3se1apgcscntrnbu6h302a0fp8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.frost.online_store",
+            "certificate_hash": "1817b7eb360f75e6de4f1c453eecf553b6504cf8"
+          }
+        },
+        {
+          "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaj25vqc9rCFuExj4XW2Kk9ds4IlUI3wc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602898395355:android:16560fd1284a0048",
+        "android_client_info": {
+          "package_name": "multiplelay.android.stanislav.com.cloudtasks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602898395355-lfd2hrnccr21a47s8aeku3cjucejq8g6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "multiplelay.android.stanislav.com.cloudtasks",
+            "certificate_hash": "73c4058d7b941c3f5a3b1e12b44b2586abfee937"
+          }
+        },
+        {
+          "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaj25vqc9rCFuExj4XW2Kk9ds4IlUI3wc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602898395355-edcnukouh1sp1lgk2lhsiipdf53quqb9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -21,7 +21,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
 public class ItemMenuFragment extends Fragment {
 
 
@@ -57,10 +60,13 @@ public class ItemMenuFragment extends Fragment {
         item_list = new ArrayList<>();
         items_names = new ArrayList<>();
 
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        Date d = new Date();
+        String dayOfTheWeek = sdf.format(d);
 
         myRef.child(user.getUid()).
 
-                child("Items").
+                child(dayOfTheWeek).
 
                 addChildEventListener(new ChildEventListener() {
                     @Override

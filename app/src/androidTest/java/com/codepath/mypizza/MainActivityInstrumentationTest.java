@@ -21,9 +21,4 @@ public class MainActivityInstrumentationTest {
   // Looks for an EditText with id = "R.id.etInput"
   // Types the text "Hello" into the EditText
   // Verifies the EditText has text "Hello"
-  @Test
-  public void validateEditText() {
-
-    onView(withId(R.id.etInput)).perform(typeText("Hello")).check(matches(withText("Hello")));
-  }
 }

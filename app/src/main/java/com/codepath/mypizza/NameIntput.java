@@ -83,7 +83,5 @@ public class NameIntput extends AppCompatActivity {
         Intent nextActivity = new Intent(this, InputPrice.class);
         nextActivity.putExtra(Shared.ITEM_OBJECT, buildItem);
         startActivity(nextActivity);
-
-
     }
 }

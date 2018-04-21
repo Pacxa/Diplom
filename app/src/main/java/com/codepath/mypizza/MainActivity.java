@@ -1,14 +1,19 @@
 package com.codepath.mypizza;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codepath.mypizza.entity.Item;
 import com.codepath.mypizza.fragments.ItemDetailFragment;
 import com.codepath.mypizza.fragments.ItemMenuFragment;
+import com.codepath.mypizza.shared.Shared;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -17,7 +22,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements ItemMenuFragment.OnItemSelectedListener {
 
@@ -29,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements ItemMenuFragment.
 
     FirebaseUser user;
 
+    private EditText nameEditText;
+    private Item buildItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +50,11 @@ public class MainActivity extends AppCompatActivity implements ItemMenuFragment.
         database = FirebaseDatabase.getInstance();
         user = mAuth.getCurrentUser();
 
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        Date d = new Date();
+        String dayOfTheWeek = sdf.format(d);
 
-        myRef.child(user.getUid()).child("Items").addChildEventListener(new ChildEventListener() {
+        myRef.child(user.getUid()).child(dayOfTheWeek).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 fetchData(dataSnapshot);
@@ -73,8 +85,6 @@ public class MainActivity extends AppCompatActivity implements ItemMenuFragment.
         if (savedInstanceState == null) {
             // Instance of first fragment
             ItemMenuFragment firstFragment = new ItemMenuFragment();
-
-            // Add Fragment to FrameLayout (flContainer), using FragmentManager
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();// begin  FragmentTransaction
             ft.add(R.id.flContainer, firstFragment);                                // add    Fragment
             ft.commit();                                                            // commit FragmentTransaction
@@ -128,13 +138,17 @@ public class MainActivity extends AppCompatActivity implements ItemMenuFragment.
         item.setSelected(dataSnapshot.getValue(Item.class).getSelected());
         item.setPathToPhoto(dataSnapshot.getValue(Item.class).getPathToPhoto());
         item_list.add(item);
-        //item_keys.add(dataSnapshot.getKey());
     }
 
     public void refreshAdapter() {
         //multiSelectAdapter.selected_usersList = multiselect_list;
         //multiSelectAdapter.itemList = item_list;
         // multiSelectAdapter.notifyDataSetChanged();
+    }
+
+    public void onGoToNextActivityClick(View view) {
+        Intent nextActivity = new Intent(this, NameIntput.class);
+        startActivity(nextActivity);
     }
 
 }

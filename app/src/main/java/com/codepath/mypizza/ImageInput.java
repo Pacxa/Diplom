@@ -21,6 +21,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class ImageInput extends AppCompatActivity {
@@ -98,7 +100,11 @@ public class ImageInput extends AppCompatActivity {
 
     public void onSaveButtonClick(View view){
 
-        myRef.child(user.getUid()).child("Items").push().setValue(new Item(buildItem.getName(),buildItem.getPrice(),buildItem.getSelected(), buildItem.getPathToPhoto()));
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        Date d = new Date();
+        String dayOfTheWeek = sdf.format(d);
+
+        myRef.child(user.getUid()).child(dayOfTheWeek).push().setValue(new Item(buildItem.getName(),buildItem.getPrice(),buildItem.getSelected(), buildItem.getPathToPhoto()));
 
         Cursor c = dbHelper.fetchAllItems();
         Intent allItems = new Intent(this, MainActivity.class);
